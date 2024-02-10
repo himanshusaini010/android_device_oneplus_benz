@@ -155,6 +155,8 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery
 
 # Fingerprint
+TARGET_HAS_UDFPS := true
+
 PRODUCT_PACKAGES += \
     IFAAService
 
