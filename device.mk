@@ -230,12 +230,13 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
+    BYPASS_CHARGE_SUPPORTED := true
 
 PRODUCT_SYSTEM_PROPERTIES += \
     sys.brightness.disable_gamma_conversion=true
 
 # IR
-#$(call inherit-product, vendor/oneplus/ir/config.mk)
+$(call inherit-product, vendor/oneplus/ir/config.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
@@ -462,7 +463,7 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Dolby
-#$(call inherit-product, vendor/oneplus/dolby/config.mk)
+$(call inherit-product, vendor/oneplus/dolby/config.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/benz/benz-vendor.mk)
