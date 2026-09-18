@@ -250,6 +250,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 
+# Maintainer Name
+INFINITY_MAINTAINER := Himanshu
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
@@ -467,3 +470,8 @@ $(call inherit-product, vendor/oneplus/dolby/config.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/benz/benz-vendor.mk)
+
+# Whether Including Google Apps
+WITH_GAPPS := true
+
+TARGET_SYSTEM_PROP += device/oneplus/benz/system.prop
