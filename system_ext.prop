@@ -45,3 +45,8 @@ persist.vendor.sensors.enable.mag_filter=true
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+
+#System properties
+ro.product.marketname = Oneplus Nord CE4
+ro.infinity.soc = Snapdragon 7 Gen 3
+ro.infinity.camera = 50MP+8MP+16MP
